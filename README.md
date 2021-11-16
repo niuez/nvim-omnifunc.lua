@@ -16,7 +16,7 @@ you can also use `omnifunc.lsp.default_completion_to_complete`. its implementati
 local omnifunc = require'nvim_omnifunc'
 
 function _G.cclsomnifunc(findstart, base)
-  -- you can instead to use `omnifunc.lsp.default.completion_to_complete`
+  -- you can instead to use `omnifunc.lsp.default_completion_to_complete`
   return omnifunc.lsp.create_lsp_omnifunc(function(completion_item, ctx)
     local info = completion_item.label
     local word = omnifunc.lsp.get_completion_word(completion_item)
